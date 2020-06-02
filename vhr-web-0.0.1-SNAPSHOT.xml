@@ -1,0 +1,13 @@
+
+<configuration>
+
+  <id>vhr-web-0.0.1-SNAPSHOT</id>
+  <name>vhr-web-0.0.1-SNAPSHOT  (powered by WinSW)</name>
+
+  <!--服务描述-->
+  <description>This service is a service for Statement Project（http://www.eachtravel.com/）</description>
+  <executable>java</executable>
+
+  <arguments>-jar  vhr-web-0.0.1-SNAPSHOT.jar</arguments>
+
+</configuration>

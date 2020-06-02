@@ -1,0 +1,1044 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.2.RELEASE)
+
+2020-06-02 14:48:46.090  INFO 8276 --- [           main] top.codeboy.vhr.VhrApplication           : Starting VhrApplication v0.0.1-SNAPSHOT on DESKTOP-JHEJEJP with PID 8276 (G:\Projects\JavaProjects\vpms-master\winsw\vhr-web-0.0.1-SNAPSHOT.jar started by DESKTOP-JHEJEJP$ in G:\Projects\JavaProjects\vpms-master\winsw)
+2020-06-02 14:48:46.122  INFO 8276 --- [           main] top.codeboy.vhr.VhrApplication           : No active profile set, falling back to default profiles: default
+2020-06-02 14:49:29.769  INFO 8276 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-06-02 14:49:29.796  INFO 8276 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-02 14:49:29.796  INFO 8276 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-06-02 14:49:30.735  INFO 8276 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-02 14:49:30.736  INFO 8276 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 39886 ms
+2020-06-02 14:49:31.998  INFO 8276 --- [           main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-02 14:49:34.489  INFO 8276 --- [           main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-02 14:49:38.539  INFO 8276 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-06-02 14:49:38.544  INFO 8276 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-06-02 14:49:38.908  INFO 8276 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-06-02 14:49:39.522  INFO 8276 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'brokerChannelExecutor'
+2020-06-02 14:49:44.923  INFO 8276 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-06-02 14:49:44.967  INFO 8276 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5386659f, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f485fda, org.springframework.security.web.header.HeaderWriterFilter@15043a2f, org.springframework.security.web.authentication.logout.LogoutFilter@5afa3c9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6fa51cd4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d737b89, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d901eb0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14028087, org.springframework.security.web.session.SessionManagementFilter@1349883, org.springframework.security.web.access.ExceptionTranslationFilter@196a42c3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4681c175]
+2020-06-02 14:49:45.101  INFO 8276 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2020-06-02 14:49:45.102  INFO 8276 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-06-02 14:49:45.103  INFO 8276 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2020-06-02 14:49:45.351  INFO 8276 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-06-02 14:49:45.355  INFO 8276 --- [           main] top.codeboy.vhr.VhrApplication           : Started VhrApplication in 69.829 seconds (JVM running for 101.003)
+2020-06-02 14:49:56.142  INFO 8276 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-02 14:49:56.143  INFO 8276 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-02 14:49:56.157  INFO 8276 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-06-02 14:49:58.470 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.HrMapper.loadUserByUsername      : ==>  Preparing: select * from hr where username = ? 
+2020-06-02 14:49:58.507 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.HrMapper.loadUserByUsername      : ==> Parameters: admin(String)
+2020-06-02 14:49:58.558 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.HrMapper.loadUserByUsername      : <==      Total: 1
+2020-06-02 14:49:58.561 DEBUG 8276 --- [nio-8081-exec-1] t.c.vhr.mapper.HrMapper.getHrRolesById   : ==>  Preparing: select r.* from role r, hr_role hrr where hrr.`rid`=r.`id` and hrr.`hrid`=? 
+2020-06-02 14:49:58.562 DEBUG 8276 --- [nio-8081-exec-1] t.c.vhr.mapper.HrMapper.getHrRolesById   : ==> Parameters: 3(Integer)
+2020-06-02 14:49:58.618 DEBUG 8276 --- [nio-8081-exec-1] t.c.vhr.mapper.HrMapper.getHrRolesById   : <==      Total: 1
+2020-06-02 14:49:58.894 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:49:58.895 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:49:58.980 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:49:59.011 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.mapper.MenuMapper.getMenusByHrId   : ==>  Preparing: select distinct m1.*,m2.`id` as id2,m2.`component` as component2,m2.`enabled` as enabled2, m2.`iconCls` as iconCls2,m2.`keepAlive` as keepAlive2,m2.`name` as name2, m2.`parentId` as parentId2,m2.`requireAuth` as requireAuth2,m2.`path` as path2 from menu m1,menu m2,hr_role hrr,menu_role mr where m1.`id`=m2.`parentId` and hrr.`hrid`=? and hrr.`rid`=mr.`rid` and mr.`mid`=m2.`id` and m2.`enabled`=true ORDER BY m1.`id`,m2.`id` 
+2020-06-02 14:49:59.012 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.mapper.MenuMapper.getMenusByHrId   : ==> Parameters: 3(Integer)
+2020-06-02 14:49:59.024 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.mapper.MenuMapper.getMenusByHrId   : <==      Total: 20
+2020-06-02 14:49:59.311 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:49:59.311 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:49:59.322 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:49:59.647 DEBUG 8276 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:49:59.648 DEBUG 8276 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:49:59.694 DEBUG 8276 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:49:59.725 ERROR 8276 --- [nio-8081-exec-4] o.s.w.s.s.s.DefaultHandshakeHandler      : Handshake failed due to invalid Upgrade header: null
+2020-06-02 14:49:59.743 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:49:59.744 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:49:59.752 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:00.047 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:00.048 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:00.059 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:00.448 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:00.449 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:00.463 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:00.723 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:00.724 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:00.733 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:01.405 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:01.405 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:01.411 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:01.447 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:01.447 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:01.452 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:01.470 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:01.471 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:01.476 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:01.480 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:01.480 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:01.486 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:01.525 DEBUG 8276 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:01.526 DEBUG 8276 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:01.530 DEBUG 8276 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:01.547 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:01.547 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:01.552 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:07.165 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:07.166 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:07.167 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:07.171 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:07.182 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:07.194 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:07.195 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.NationMapper.findAllNations      : ==>  Preparing: select * from nation ; 
+2020-06-02 14:50:07.196 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.NationMapper.findAllNations      : ==> Parameters: 
+2020-06-02 14:50:07.224 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.NationMapper.findAllNations      : <==      Total: 56
+2020-06-02 14:50:07.423 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:07.424 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:07.434 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:07.437 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.JobLevelMapper.getAllJobLevels   : ==>  Preparing: select * from joblevel 
+2020-06-02 14:50:07.438 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.JobLevelMapper.getAllJobLevels   : ==> Parameters: 
+2020-06-02 14:50:07.484 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.JobLevelMapper.getAllJobLevels   : <==      Total: 8
+2020-06-02 14:50:07.484 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:07.484 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:07.490 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:07.492 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.P.getAllPoliticsstatus           : ==>  Preparing: select * from politicsstatus ; 
+2020-06-02 14:50:07.494 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.P.getAllPoliticsstatus           : ==> Parameters: 
+2020-06-02 14:50:07.503 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:07.503 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:07.507 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:07.508 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.PositionMapper.getAllPositions   : ==>  Preparing: select * from position 
+2020-06-02 14:50:07.508 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.PositionMapper.getAllPositions   : ==> Parameters: 
+2020-06-02 14:50:07.549 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:07.550 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:07.554 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:07.555 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:50:07.556 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==> Parameters: -1(Integer)
+2020-06-02 14:50:07.595 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.E.getEmployeeByPage              : ==>  Preparing: select e.*, p.`id` as pid, p.`name` as pname,n.`id` as nid, n.`name` as nname, d.`id` as did, d.`name` as dname, j.`id` as jid, j.`name` as jname, pos.`id` as posid, pos.`name` as posname from employee e , nation n, politicsstatus p, department d, joblevel j, position pos where e.`nationId`=n.`id` and e.`politicId`=p.`id` and e.`departmentId`=d.`id` and e.`jobLevelId`=j.`id` and e.`posId`=pos.`id` limit ?, ? 
+2020-06-02 14:50:07.595 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.E.getEmployeeByPage              : ==> Parameters: 0(Integer), 10(Integer)
+2020-06-02 14:50:07.603 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.P.getAllPoliticsstatus           : <==      Total: 13
+2020-06-02 14:50:07.617 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.PositionMapper.getAllPositions   : <==      Total: 6
+2020-06-02 14:50:07.644 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ====>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:50:07.645 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ====> Parameters: 1(Integer)
+2020-06-02 14:50:07.648 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ======>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:50:07.648 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ======> Parameters: 4(Integer)
+2020-06-02 14:50:07.651 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:50:07.652 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ========> Parameters: 5(Integer)
+2020-06-02 14:50:07.655 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.E.getEmployeeByPage              : <==      Total: 10
+2020-06-02 14:50:07.655 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:50:07.656 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 8(Integer)
+2020-06-02 14:50:07.657 DEBUG 8276 --- [nio-8081-exec-6] t.c.vhr.mapper.EmployeeMapper.getTotal   : ==>  Preparing: select count(*) from employee e 
+2020-06-02 14:50:07.657 DEBUG 8276 --- [nio-8081-exec-6] t.c.vhr.mapper.EmployeeMapper.getTotal   : ==> Parameters: 
+2020-06-02 14:50:07.659 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 0
+2020-06-02 14:50:07.661 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:50:07.662 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 78(Integer)
+2020-06-02 14:50:07.662 DEBUG 8276 --- [nio-8081-exec-6] t.c.vhr.mapper.EmployeeMapper.getTotal   : <==      Total: 1
+2020-06-02 14:50:07.664 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:50:07.665 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ============> Parameters: 81(Integer)
+2020-06-02 14:50:07.671 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:50:07.672 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==============> Parameters: 85(Integer)
+2020-06-02 14:50:07.674 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <==============      Total: 0
+2020-06-02 14:50:07.675 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <============      Total: 1
+2020-06-02 14:50:07.675 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:50:07.678 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ============> Parameters: 82(Integer)
+2020-06-02 14:50:07.686 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <============      Total: 0
+2020-06-02 14:50:07.686 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:50:07.687 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ============> Parameters: 86(Integer)
+2020-06-02 14:50:07.689 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:50:07.689 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==============> Parameters: 87(Integer)
+2020-06-02 14:50:07.707 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ================>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:50:07.707 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ================> Parameters: 89(Integer)
+2020-06-02 14:50:07.708 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <================      Total: 0
+2020-06-02 14:50:07.709 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <==============      Total: 1
+2020-06-02 14:50:07.711 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <============      Total: 1
+2020-06-02 14:50:07.711 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 3
+2020-06-02 14:50:07.712 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:50:07.712 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 91(Integer)
+2020-06-02 14:50:07.714 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 0
+2020-06-02 14:50:07.714 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:50:07.715 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 92(Integer)
+2020-06-02 14:50:07.716 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 0
+2020-06-02 14:50:07.716 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <========      Total: 4
+2020-06-02 14:50:07.716 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <======      Total: 1
+2020-06-02 14:50:07.717 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <====      Total: 1
+2020-06-02 14:50:07.717 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <==      Total: 1
+2020-06-02 14:50:26.542 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:26.543 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:26.548 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:50:39.523  INFO 8276 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[4 current WS(0)-HttpStream(3)-HttpPoll(1), 4 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 6], outboundChannel[pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 5, completed tasks = 12]
+2020-06-02 14:50:49.813  WARN 8276 --- [nio-8081-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'application/javascript;charset=UTF-8']
+2020-06-02 14:50:50.068  WARN 8276 --- [nio-8081-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'text/event-stream;charset=UTF-8']
+2020-06-02 14:50:50.768 ERROR 8276 --- [nio-8081-exec-7] s.e.ErrorMvcAutoConfiguration$StaticView : Cannot render error page for request [/ws/ep/091/ppas2hir/htmlfile] and exception [你的主机中的软件中止了一个已建立的连接。] as the response has already been committed. As a result, the response may have the wrong status code.
+2020-06-02 14:50:51.586 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:50:51.588 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:50:51.598 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:51:16.612 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:51:16.612 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:51:16.616 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:15.698 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.HrMapper.loadUserByUsername      : ==>  Preparing: select * from hr where username = ? 
+2020-06-02 14:57:15.698 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.HrMapper.loadUserByUsername      : ==> Parameters: admin(String)
+2020-06-02 14:57:15.700 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.HrMapper.loadUserByUsername      : <==      Total: 1
+2020-06-02 14:57:15.701 DEBUG 8276 --- [nio-8081-exec-1] t.c.vhr.mapper.HrMapper.getHrRolesById   : ==>  Preparing: select r.* from role r, hr_role hrr where hrr.`rid`=r.`id` and hrr.`hrid`=? 
+2020-06-02 14:57:15.701 DEBUG 8276 --- [nio-8081-exec-1] t.c.vhr.mapper.HrMapper.getHrRolesById   : ==> Parameters: 3(Integer)
+2020-06-02 14:57:15.703 DEBUG 8276 --- [nio-8081-exec-1] t.c.vhr.mapper.HrMapper.getHrRolesById   : <==      Total: 1
+2020-06-02 14:57:15.831 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:15.831 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:15.834 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:15.835 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.mapper.MenuMapper.getMenusByHrId   : ==>  Preparing: select distinct m1.*,m2.`id` as id2,m2.`component` as component2,m2.`enabled` as enabled2, m2.`iconCls` as iconCls2,m2.`keepAlive` as keepAlive2,m2.`name` as name2, m2.`parentId` as parentId2,m2.`requireAuth` as requireAuth2,m2.`path` as path2 from menu m1,menu m2,hr_role hrr,menu_role mr where m1.`id`=m2.`parentId` and hrr.`hrid`=? and hrr.`rid`=mr.`rid` and mr.`mid`=m2.`id` and m2.`enabled`=true ORDER BY m1.`id`,m2.`id` 
+2020-06-02 14:57:15.836 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.mapper.MenuMapper.getMenusByHrId   : ==> Parameters: 3(Integer)
+2020-06-02 14:57:15.838 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.mapper.MenuMapper.getMenusByHrId   : <==      Total: 20
+2020-06-02 14:57:15.930 DEBUG 8276 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:15.931 DEBUG 8276 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:15.941 DEBUG 8276 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:16.267 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:16.268 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:16.280 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:16.283 ERROR 8276 --- [nio-8081-exec-5] o.s.w.s.s.s.DefaultHandshakeHandler      : Handshake failed due to invalid Upgrade header: null
+2020-06-02 14:57:16.296 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:16.297 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:16.300 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:16.667 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:16.667 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:16.670 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:17.002 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:17.003 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:17.011 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:17.353 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:17.354 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:17.357 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:18.047 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:18.048 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:18.052 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:18.061 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:18.061 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:18.065 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:18.081 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:18.082 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:18.083 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:18.084 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:18.084 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:18.091 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:18.107 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:18.107 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:18.110 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:18.123 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:18.124 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:18.128 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:19.654 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:19.654 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:19.655 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:19.655 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:19.658 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:19.659 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.NationMapper.findAllNations      : ==>  Preparing: select * from nation ; 
+2020-06-02 14:57:19.659 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.NationMapper.findAllNations      : ==> Parameters: 
+2020-06-02 14:57:19.660 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:19.662 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.NationMapper.findAllNations      : <==      Total: 56
+2020-06-02 14:57:19.663 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.E.getEmployeeByPage              : ==>  Preparing: select e.*, p.`id` as pid, p.`name` as pname,n.`id` as nid, n.`name` as nname, d.`id` as did, d.`name` as dname, j.`id` as jid, j.`name` as jname, pos.`id` as posid, pos.`name` as posname from employee e , nation n, politicsstatus p, department d, joblevel j, position pos where e.`nationId`=n.`id` and e.`politicId`=p.`id` and e.`departmentId`=d.`id` and e.`jobLevelId`=j.`id` and e.`posId`=pos.`id` limit ?, ? 
+2020-06-02 14:57:19.663 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.E.getEmployeeByPage              : ==> Parameters: 0(Integer), 10(Integer)
+2020-06-02 14:57:19.666 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:19.666 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:19.669 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:19.670 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.JobLevelMapper.getAllJobLevels   : ==>  Preparing: select * from joblevel 
+2020-06-02 14:57:19.670 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.JobLevelMapper.getAllJobLevels   : ==> Parameters: 
+2020-06-02 14:57:19.673 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.JobLevelMapper.getAllJobLevels   : <==      Total: 8
+2020-06-02 14:57:19.676 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.E.getEmployeeByPage              : <==      Total: 10
+2020-06-02 14:57:19.677 DEBUG 8276 --- [nio-8081-exec-8] t.c.vhr.mapper.EmployeeMapper.getTotal   : ==>  Preparing: select count(*) from employee e 
+2020-06-02 14:57:19.677 DEBUG 8276 --- [nio-8081-exec-8] t.c.vhr.mapper.EmployeeMapper.getTotal   : ==> Parameters: 
+2020-06-02 14:57:19.678 DEBUG 8276 --- [nio-8081-exec-8] t.c.vhr.mapper.EmployeeMapper.getTotal   : <==      Total: 1
+2020-06-02 14:57:19.678 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:19.679 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:19.688 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:19.689 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:19.689 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:19.689 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.P.getAllPoliticsstatus           : ==>  Preparing: select * from politicsstatus ; 
+2020-06-02 14:57:19.689 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.P.getAllPoliticsstatus           : ==> Parameters: 
+2020-06-02 14:57:19.690 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.P.getAllPoliticsstatus           : <==      Total: 13
+2020-06-02 14:57:19.691 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:19.692 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:57:19.692 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==> Parameters: -1(Integer)
+2020-06-02 14:57:19.693 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ====>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:57:19.694 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ====> Parameters: 1(Integer)
+2020-06-02 14:57:19.695 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ======>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:57:19.695 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ======> Parameters: 4(Integer)
+2020-06-02 14:57:19.696 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:57:19.696 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ========> Parameters: 5(Integer)
+2020-06-02 14:57:19.696 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:19.697 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:57:19.698 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 8(Integer)
+2020-06-02 14:57:19.698 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 0
+2020-06-02 14:57:19.699 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:57:19.699 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 78(Integer)
+2020-06-02 14:57:19.700 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:57:19.700 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ============> Parameters: 81(Integer)
+2020-06-02 14:57:19.701 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:57:19.702 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==============> Parameters: 85(Integer)
+2020-06-02 14:57:19.702 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <==============      Total: 0
+2020-06-02 14:57:19.702 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:19.703 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <============      Total: 1
+2020-06-02 14:57:19.704 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:57:19.705 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ============> Parameters: 82(Integer)
+2020-06-02 14:57:19.706 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:19.706 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <============      Total: 0
+2020-06-02 14:57:19.707 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:57:19.707 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ============> Parameters: 86(Integer)
+2020-06-02 14:57:19.708 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:57:19.707 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.PositionMapper.getAllPositions   : ==>  Preparing: select * from position 
+2020-06-02 14:57:19.708 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==============> Parameters: 87(Integer)
+2020-06-02 14:57:19.708 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.PositionMapper.getAllPositions   : ==> Parameters: 
+2020-06-02 14:57:19.709 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ================>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:57:19.709 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.PositionMapper.getAllPositions   : <==      Total: 6
+2020-06-02 14:57:19.710 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ================> Parameters: 89(Integer)
+2020-06-02 14:57:19.712 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <================      Total: 0
+2020-06-02 14:57:19.712 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <==============      Total: 1
+2020-06-02 14:57:19.712 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <============      Total: 1
+2020-06-02 14:57:19.712 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 3
+2020-06-02 14:57:19.712 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:57:19.713 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 91(Integer)
+2020-06-02 14:57:19.716 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 0
+2020-06-02 14:57:19.716 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 14:57:19.716 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 92(Integer)
+2020-06-02 14:57:19.717 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 0
+2020-06-02 14:57:19.717 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <========      Total: 4
+2020-06-02 14:57:19.718 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <======      Total: 1
+2020-06-02 14:57:19.718 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <====      Total: 1
+2020-06-02 14:57:19.718 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.D.getAllDepartmentsByParentId    : <==      Total: 1
+2020-06-02 14:57:21.970 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:21.971 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:21.973 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:57:21.974 DEBUG 8276 --- [nio-8081-exec-3] t.c.vhr.mapper.EmployeeMapper.maxWorkID  : ==>  Preparing: select max(workID) from employee ; 
+2020-06-02 14:57:21.974 DEBUG 8276 --- [nio-8081-exec-3] t.c.vhr.mapper.EmployeeMapper.maxWorkID  : ==> Parameters: 
+2020-06-02 14:57:21.980 DEBUG 8276 --- [nio-8081-exec-3] t.c.vhr.mapper.EmployeeMapper.maxWorkID  : <==      Total: 1
+2020-06-02 14:57:43.120 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:57:43.120 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:57:43.123 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:58:06.317  WARN 8276 --- [nio-8081-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'application/javascript;charset=UTF-8']
+2020-06-02 14:58:06.680  WARN 8276 --- [nio-8081-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'text/event-stream;charset=UTF-8']
+2020-06-02 14:58:07.375 ERROR 8276 --- [nio-8081-exec-2] s.e.ErrorMvcAutoConfiguration$StaticView : Cannot render error page for request [/ws/ep/007/dhj3dbvk/htmlfile] and exception [你的主机中的软件中止了一个已建立的连接。] as the response has already been committed. As a result, the response may have the wrong status code.
+2020-06-02 14:58:08.135 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:58:08.135 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:58:08.137 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:58:33.148 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:58:33.148 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:58:33.150 DEBUG 8276 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:58:58.183 DEBUG 8276 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:58:58.184 DEBUG 8276 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:58:58.193 DEBUG 8276 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:59:23.232 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:59:23.232 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:59:23.237 DEBUG 8276 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:59:48.261 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:59:48.262 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:59:48.271 DEBUG 8276 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:59:51.813 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 14:59:51.814 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 14:59:51.819 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 14:59:52.091 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.EmployeeMapper.insertSelective   : ==>  Preparing: insert into employee ( name, gender, birthday, idCard, wedlock, nationId, nativePlace, politicId, email, phone, address, departmentId, jobLevelId, posId, engageForm, tiptopDegree, specialty, school, beginDate, workID, contractTerm, conversionTime, beginContract, endContract ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-02 14:59:52.140 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.EmployeeMapper.insertSelective   : ==> Parameters: sdf(String), 男(String), 2015-06-01(Date), 330213201506012530(String), 未婚(String), 1(Integer), 湖南(String), 7(Integer), 213180260@qq.com(String), 13890721568(String), 湖南长沙(String), 91(Integer), 10(Integer), 29(Integer), 劳动合同(String), 本科(String), 信息管理(String), 长沙理工大学(String), 2020-04-10(Date), 00000063(String), 2.08(Double), 2020-05-10(Date), 2020-04-10(Date), 2022-05-10(Date)
+2020-06-02 14:59:52.198 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.EmployeeMapper.insertSelective   : <==    Updates: 1
+2020-06-02 14:59:52.386 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.EmployeeMapper.getEmployeeById   : ==>  Preparing: select e.*, p.`id` as pid, p.`name` as pname,n.`id` as nid, n.`name` as nname, d.`id` as did, d.`name` as dname, j.`id` as jid, j.`name` as jname, pos.`id` as posid, pos.`name` as posname from employee e , nation n, politicsstatus p, department d, joblevel j, position pos where e.`nationId`=n.`id` and e.`politicId`=p.`id` and e.`departmentId`=d.`id` and e.`jobLevelId`=j.`id` and e.`posId`=pos.`id` and e.`id`=? 
+2020-06-02 14:59:52.386 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.EmployeeMapper.getEmployeeById   : ==> Parameters: 1531(Integer)
+2020-06-02 14:59:52.388 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.EmployeeMapper.getEmployeeById   : <==      Total: 1
+2020-06-02 14:59:52.389  INFO 8276 --- [nio-8081-exec-8] top.codeboy.vhr.service.EmployeeService  : Employee{id=1531, name='sdf', gender='男', birthday=Mon Jun 01 00:00:00 CST 2015, idCard='330213201506012530', wedlock='未婚', nationId=1, nativePlace='湖南', politicId=7, email='213180260@qq.com', phone='13890721568', address='湖南长沙', departmentId=91, jobLevelId=10, posId=29, engageForm='劳动合同', tiptopDegree='本科', specialty='信息管理', school='长沙理工大学', beginDate=Fri Apr 10 00:00:00 CST 2020, workState='在职', workID='00000063', contractTerm=2.08, conversionTime=Sun May 10 00:00:00 CST 2020, notWorkDate=null, beginContract=Fri Apr 10 00:00:00 CST 2020, endContract=Tue May 10 00:00:00 CST 2022, workAge=null, nation=top.codeboy.vhr.model.Nation@d82c5, politicsstatus=top.codeboy.vhr.model.Politicsstatus@3345bc07, department=top.codeboy.vhr.model.Department@17ed238, jobLevel=top.codeboy.vhr.model.JobLevel@1421c1d, position=top.codeboy.vhr.model.Position@2e560304}
+2020-06-02 14:59:52.473  INFO 8276 --- [nio-8081-exec-8] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.99.100:5672]
+2020-06-02 15:00:13.322 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:00:13.322 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:00:13.329 DEBUG 8276 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:00:13.660 ERROR 8276 --- [nio-8081-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection timed out: connect] with root cause
+
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_181]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_181]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_181]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_181]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_181]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_181]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_181]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_181]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.7.3.jar!/:5.7.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1113) ~[amqp-client-5.7.3.jar!/:5.7.3]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1063) ~[amqp-client-5.7.3.jar!/:5.7.3]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526) ~[spring-rabbit-2.2.2.RELEASE.jar!/:2.2.2.RELEASE]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473) ~[spring-rabbit-2.2.2.RELEASE.jar!/:2.2.2.RELEASE]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751) ~[spring-rabbit-2.2.2.RELEASE.jar!/:2.2.2.RELEASE]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:215) ~[spring-rabbit-2.2.2.RELEASE.jar!/:2.2.2.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2085) ~[spring-rabbit-2.2.2.RELEASE.jar!/:2.2.2.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2058) ~[spring-rabbit-2.2.2.RELEASE.jar!/:2.2.2.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.send(RabbitTemplate.java:1004) ~[spring-rabbit-2.2.2.RELEASE.jar!/:2.2.2.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.convertAndSend(RabbitTemplate.java:1070) ~[spring-rabbit-2.2.2.RELEASE.jar!/:2.2.2.RELEASE]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.convertAndSend(RabbitTemplate.java:1052) ~[spring-rabbit-2.2.2.RELEASE.jar!/:2.2.2.RELEASE]
+	at top.codeboy.vhr.service.EmployeeService.addEmp(EmployeeService.java:62) ~[vhr-service-1.0-SNAPSHOT.jar!/:1.0-SNAPSHOT]
+	at top.codeboy.vhr.controller.emp.EmpBasicController.addEmp(EmpBasicController.java:45) ~[classes!/:0.0.1-SNAPSHOT]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) ~[druid-1.1.10.jar!/:1.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+
+2020-06-02 15:00:38.930 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:00:38.931 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:00:38.937 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:01:04.932 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:01:04.932 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:01:04.934 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:01:30.924 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:01:30.925 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:01:30.930 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:01:56.932 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:01:56.933 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:01:56.945 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:02:22.922 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:02:22.922 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:02:22.925 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:02:48.925 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:02:48.925 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:02:48.931 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:03:14.927 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:03:14.927 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:03:14.929 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:03:40.922 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:03:40.922 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:03:40.924 DEBUG 8276 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:04:06.921 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:04:06.921 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:04:06.923 DEBUG 8276 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:04:32.922 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:04:32.922 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:04:32.924 DEBUG 8276 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:04:58.924 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:04:58.925 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:04:58.931 DEBUG 8276 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:05:24.930 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:05:24.930 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:05:24.932 DEBUG 8276 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.2.RELEASE)
+
+2020-06-02 15:06:04.908  INFO 9184 --- [           main] top.codeboy.vhr.VhrApplication           : Starting VhrApplication v0.0.1-SNAPSHOT on DESKTOP-JHEJEJP with PID 9184 (G:\Projects\JavaProjects\vpms-master\winsw\vhr-web-0.0.1-SNAPSHOT.jar started by DESKTOP-JHEJEJP$ in G:\Projects\JavaProjects\vpms-master\winsw)
+2020-06-02 15:06:04.913  INFO 9184 --- [           main] top.codeboy.vhr.VhrApplication           : No active profile set, falling back to default profiles: default
+2020-06-02 15:06:09.585  INFO 9184 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-06-02 15:06:09.604  INFO 9184 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-02 15:06:09.604  INFO 9184 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-06-02 15:06:09.755  INFO 9184 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-02 15:06:09.755  INFO 9184 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4722 ms
+2020-06-02 15:06:10.014  INFO 9184 --- [           main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-06-02 15:06:10.955  INFO 9184 --- [           main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-06-02 15:06:11.511  INFO 9184 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientInboundChannelExecutor'
+2020-06-02 15:06:11.517  INFO 9184 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'clientOutboundChannelExecutor'
+2020-06-02 15:06:11.896  INFO 9184 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'messageBrokerTaskScheduler'
+2020-06-02 15:06:11.950  INFO 9184 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'brokerChannelExecutor'
+2020-06-02 15:06:12.569  INFO 9184 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: Ant [pattern='/login'], []
+2020-06-02 15:06:12.618  INFO 9184 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@710c2b53, org.springframework.security.web.context.SecurityContextPersistenceFilter@4b29d1d2, org.springframework.security.web.header.HeaderWriterFilter@4c60d6e9, org.springframework.security.web.authentication.logout.LogoutFilter@72cc7e6f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@402c4085, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28261e8e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35dab4eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5386659f, org.springframework.security.web.session.SessionManagementFilter@4a83a74a, org.springframework.security.web.access.ExceptionTranslationFilter@79e4c792, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@353352b6]
+2020-06-02 15:06:12.755  INFO 9184 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2020-06-02 15:06:12.755  INFO 9184 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [DefaultSubscriptionRegistry[cache[0 destination(s)], registry[0 sessions]]]]
+2020-06-02 15:06:12.757  INFO 9184 --- [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2020-06-02 15:06:12.847  INFO 9184 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-06-02 15:06:12.851  INFO 9184 --- [           main] top.codeboy.vhr.VhrApplication           : Started VhrApplication in 8.835 seconds (JVM running for 9.604)
+2020-06-02 15:06:34.043  INFO 9184 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-02 15:06:34.044  INFO 9184 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-02 15:06:34.057  INFO 9184 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-06-02 15:06:34.467 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.HrMapper.loadUserByUsername      : ==>  Preparing: select * from hr where username = ? 
+2020-06-02 15:06:34.513 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.HrMapper.loadUserByUsername      : ==> Parameters: admin(String)
+2020-06-02 15:06:34.549 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.HrMapper.loadUserByUsername      : <==      Total: 1
+2020-06-02 15:06:34.551 DEBUG 9184 --- [nio-8081-exec-1] t.c.vhr.mapper.HrMapper.getHrRolesById   : ==>  Preparing: select r.* from role r, hr_role hrr where hrr.`rid`=r.`id` and hrr.`hrid`=? 
+2020-06-02 15:06:34.553 DEBUG 9184 --- [nio-8081-exec-1] t.c.vhr.mapper.HrMapper.getHrRolesById   : ==> Parameters: 3(Integer)
+2020-06-02 15:06:34.555 DEBUG 9184 --- [nio-8081-exec-1] t.c.vhr.mapper.HrMapper.getHrRolesById   : <==      Total: 1
+2020-06-02 15:06:34.800 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:34.800 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:34.854 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:34.885 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.mapper.MenuMapper.getMenusByHrId   : ==>  Preparing: select distinct m1.*,m2.`id` as id2,m2.`component` as component2,m2.`enabled` as enabled2, m2.`iconCls` as iconCls2,m2.`keepAlive` as keepAlive2,m2.`name` as name2, m2.`parentId` as parentId2,m2.`requireAuth` as requireAuth2,m2.`path` as path2 from menu m1,menu m2,hr_role hrr,menu_role mr where m1.`id`=m2.`parentId` and hrr.`hrid`=? and hrr.`rid`=mr.`rid` and mr.`mid`=m2.`id` and m2.`enabled`=true ORDER BY m1.`id`,m2.`id` 
+2020-06-02 15:06:34.886 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.mapper.MenuMapper.getMenusByHrId   : ==> Parameters: 3(Integer)
+2020-06-02 15:06:34.900 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.mapper.MenuMapper.getMenusByHrId   : <==      Total: 20
+2020-06-02 15:06:35.042 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:35.043 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:35.060 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:35.061 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.mapper.MenuMapper.getMenusByHrId   : ==>  Preparing: select distinct m1.*,m2.`id` as id2,m2.`component` as component2,m2.`enabled` as enabled2, m2.`iconCls` as iconCls2,m2.`keepAlive` as keepAlive2,m2.`name` as name2, m2.`parentId` as parentId2,m2.`requireAuth` as requireAuth2,m2.`path` as path2 from menu m1,menu m2,hr_role hrr,menu_role mr where m1.`id`=m2.`parentId` and hrr.`hrid`=? and hrr.`rid`=mr.`rid` and mr.`mid`=m2.`id` and m2.`enabled`=true ORDER BY m1.`id`,m2.`id` 
+2020-06-02 15:06:35.062 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.mapper.MenuMapper.getMenusByHrId   : ==> Parameters: 3(Integer)
+2020-06-02 15:06:35.070 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.mapper.MenuMapper.getMenusByHrId   : <==      Total: 20
+2020-06-02 15:06:35.075 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:35.076 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:35.091 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:35.214 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:35.215 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:35.233 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:35.509 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:35.510 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:35.516 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:35.534 ERROR 9184 --- [nio-8081-exec-6] o.s.w.s.s.s.DefaultHandshakeHandler      : Handshake failed due to invalid Upgrade header: null
+2020-06-02 15:06:35.543 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:35.543 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:35.551 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:35.557 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:35.558 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:35.574 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:35.576 ERROR 9184 --- [nio-8081-exec-8] o.s.w.s.s.s.DefaultHandshakeHandler      : Handshake failed due to invalid Upgrade header: null
+2020-06-02 15:06:35.583 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:35.584 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:35.588 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:35.935 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:35.936 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:35.943 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:36.586 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:36.587 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:36.610 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:36.649 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:36.652 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:36.658 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:36.982 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:36.985 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:36.995 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:37.041 ERROR 9184 --- [nio-8081-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.socket.sockjs.SockJsException: Uncaught failure in SockJS request, uri=http://localhost:8080/ws/ep/134/jnbotyhe/eventsource; nested exception is org.springframework.web.socket.sockjs.SockJsTransportFailureException: Failed to open session; nested exception is org.springframework.web.socket.sockjs.SockJsTransportFailureException: Failed to write SockJsFrame content='o'; nested exception is org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。] with root cause
+
+java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method) ~[na:1.8.0_181]
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51) ~[na:1.8.0_181]
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93) ~[na:1.8.0_181]
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65) ~[na:1.8.0_181]
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471) ~[na:1.8.0_181]
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:138) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:152) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1257) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:814) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:767) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:757) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:564) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.coyote.http11.filters.IdentityOutputFilter.flush(IdentityOutputFilter.java:117) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:217) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1138) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:400) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.coyote.Response.action(Response.java:209) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:272) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.connector.Response.flushBuffer(Response.java:497) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.connector.ResponseFacade.flushBuffer(ResponseFacade.java:312) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at javax.servlet.ServletResponseWrapper.flushBuffer(ServletResponseWrapper.java:181) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at javax.servlet.ServletResponseWrapper.flushBuffer(ServletResponseWrapper.java:181) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.springframework.security.web.util.OnCommittedResponseWrapper.flushBuffer(OnCommittedResponseWrapper.java:165) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at javax.servlet.ServletResponseWrapper.flushBuffer(ServletResponseWrapper.java:181) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.springframework.security.web.util.OnCommittedResponseWrapper.flushBuffer(OnCommittedResponseWrapper.java:165) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at javax.servlet.ServletResponseWrapper.flushBuffer(ServletResponseWrapper.java:181) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.springframework.http.server.ServletServerHttpResponse.flush(ServletServerHttpResponse.java:91) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.socket.sockjs.transport.session.AbstractHttpSockJsSession.writeFrameInternal(AbstractHttpSockJsSession.java:360) ~[spring-websocket-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.socket.sockjs.transport.session.AbstractSockJsSession.writeFrame(AbstractSockJsSession.java:325) ~[spring-websocket-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.socket.sockjs.transport.session.StreamingSockJsSession.handleRequestInternal(StreamingSockJsSession.java:64) ~[spring-websocket-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.socket.sockjs.transport.session.AbstractHttpSockJsSession.handleInitialRequest(AbstractHttpSockJsSession.java:231) ~[spring-websocket-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpSendingTransportHandler.handleRequestInternal(AbstractHttpSendingTransportHandler.java:76) ~[spring-websocket-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.socket.sockjs.transport.handler.AbstractHttpSendingTransportHandler.handleRequest(AbstractHttpSendingTransportHandler.java:66) ~[spring-websocket-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.socket.sockjs.transport.TransportHandlingSockJsService.handleTransportRequest(TransportHandlingSockJsService.java:313) ~[spring-websocket-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.socket.sockjs.support.AbstractSockJsService.handleRequest(AbstractSockJsService.java:439) ~[spring-websocket-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.socket.sockjs.support.SockJsHttpRequestHandler.handleRequest(SockJsHttpRequestHandler.java:134) ~[spring-websocket-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) ~[druid-1.1.10.jar!/:1.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.1.RELEASE.jar!/:5.2.1.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.2.RELEASE.jar!/:5.2.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.29.jar!/:9.0.29]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
+
+2020-06-02 15:06:37.308 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:37.312 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:37.343 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:37.353 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:37.353 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:37.357 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:37.391 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:37.392 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:37.396 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:37.429 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:37.429 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:37.433 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:37.477 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:37.477 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:37.482 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:37.707 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:37.707 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:37.711 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:38.082 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:38.082 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:38.086 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:39.144 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:39.144 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:39.150 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:39.521 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:39.522 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:39.533 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:39.550 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:39.551 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:39.555 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:39.565 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:39.566 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:39.568 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:39.579 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:39.580 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:39.582 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:39.589 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:39.589 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:39.593 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:48.185 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:48.186 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:48.189 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:48.191 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:48.192 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:48.194 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:48.197 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.PositionMapper.getAllPositions   : ==>  Preparing: select * from position 
+2020-06-02 15:06:48.197 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.PositionMapper.getAllPositions   : ==> Parameters: 
+2020-06-02 15:06:48.200 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.PositionMapper.getAllPositions   : <==      Total: 6
+2020-06-02 15:06:48.208 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ==>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:48.209 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ==> Parameters: -1(Integer)
+2020-06-02 15:06:48.213 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ====>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:48.213 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ====> Parameters: 1(Integer)
+2020-06-02 15:06:48.214 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ======>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:48.215 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ======> Parameters: 4(Integer)
+2020-06-02 15:06:48.216 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:48.216 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ========> Parameters: 5(Integer)
+2020-06-02 15:06:48.217 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:48.218 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 8(Integer)
+2020-06-02 15:06:48.219 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 0
+2020-06-02 15:06:48.219 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:48.220 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:48.220 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:48.220 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 78(Integer)
+2020-06-02 15:06:48.221 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:48.222 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ============> Parameters: 81(Integer)
+2020-06-02 15:06:48.223 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ==============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:48.223 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ==============> Parameters: 85(Integer)
+2020-06-02 15:06:48.224 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : <==============      Total: 0
+2020-06-02 15:06:48.224 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:48.224 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : <============      Total: 1
+2020-06-02 15:06:48.225 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:48.225 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ============> Parameters: 82(Integer)
+2020-06-02 15:06:48.226 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : <============      Total: 0
+2020-06-02 15:06:48.226 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:48.227 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ============> Parameters: 86(Integer)
+2020-06-02 15:06:48.228 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ==============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:48.228 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ==============> Parameters: 87(Integer)
+2020-06-02 15:06:48.230 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ================>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:48.230 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ================> Parameters: 89(Integer)
+2020-06-02 15:06:48.231 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : <================      Total: 0
+2020-06-02 15:06:48.232 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : <==============      Total: 1
+2020-06-02 15:06:48.232 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : <============      Total: 1
+2020-06-02 15:06:48.234 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 3
+2020-06-02 15:06:48.234 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:48.235 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 91(Integer)
+2020-06-02 15:06:48.236 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 0
+2020-06-02 15:06:48.236 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:48.236 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 92(Integer)
+2020-06-02 15:06:48.237 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 0
+2020-06-02 15:06:48.237 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : <========      Total: 4
+2020-06-02 15:06:48.238 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : <======      Total: 1
+2020-06-02 15:06:48.238 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : <====      Total: 1
+2020-06-02 15:06:48.238 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.D.getAllDepartmentsByParentId    : <==      Total: 1
+2020-06-02 15:06:48.240 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.JobLevelMapper.getAllJobLevels   : ==>  Preparing: select * from joblevel 
+2020-06-02 15:06:48.241 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.JobLevelMapper.getAllJobLevels   : ==> Parameters: 
+2020-06-02 15:06:48.242 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.JobLevelMapper.getAllJobLevels   : <==      Total: 8
+2020-06-02 15:06:48.250 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:48.250 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:48.254 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:48.255 DEBUG 9184 --- [nio-8081-exec-1] t.c.vhr.mapper.RoleMapper.getAllRoles    : ==>  Preparing: select * from role; 
+2020-06-02 15:06:48.256 DEBUG 9184 --- [nio-8081-exec-1] t.c.vhr.mapper.RoleMapper.getAllRoles    : ==> Parameters: 
+2020-06-02 15:06:48.257 DEBUG 9184 --- [nio-8081-exec-1] t.c.vhr.mapper.RoleMapper.getAllRoles    : <==      Total: 8
+2020-06-02 15:06:55.371 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:55.371 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:55.373 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:55.376 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:55.381 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:55.385 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:55.386 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.NationMapper.findAllNations      : ==>  Preparing: select * from nation ; 
+2020-06-02 15:06:55.387 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.NationMapper.findAllNations      : ==> Parameters: 
+2020-06-02 15:06:55.390 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.NationMapper.findAllNations      : <==      Total: 56
+2020-06-02 15:06:55.407 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:55.408 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:55.413 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:55.415 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.P.getAllPoliticsstatus           : ==>  Preparing: select * from politicsstatus ; 
+2020-06-02 15:06:55.416 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.P.getAllPoliticsstatus           : ==> Parameters: 
+2020-06-02 15:06:55.417 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.P.getAllPoliticsstatus           : <==      Total: 13
+2020-06-02 15:06:55.421 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:55.421 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:55.424 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:55.425 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ==>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:55.426 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ==> Parameters: -1(Integer)
+2020-06-02 15:06:55.427 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ====>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:55.427 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ====> Parameters: 1(Integer)
+2020-06-02 15:06:55.428 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ======>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:55.428 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ======> Parameters: 4(Integer)
+2020-06-02 15:06:55.430 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:55.430 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:55.430 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ========> Parameters: 5(Integer)
+2020-06-02 15:06:55.430 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:55.431 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:55.432 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 8(Integer)
+2020-06-02 15:06:55.432 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 0
+2020-06-02 15:06:55.432 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:55.433 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 78(Integer)
+2020-06-02 15:06:55.434 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:55.434 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ============> Parameters: 81(Integer)
+2020-06-02 15:06:55.435 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ==============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:55.435 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ==============> Parameters: 85(Integer)
+2020-06-02 15:06:55.436 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : <==============      Total: 0
+2020-06-02 15:06:55.436 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : <============      Total: 1
+2020-06-02 15:06:55.438 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:55.438 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ============> Parameters: 82(Integer)
+2020-06-02 15:06:55.439 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : <============      Total: 0
+2020-06-02 15:06:55.440 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:55.440 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ============> Parameters: 86(Integer)
+2020-06-02 15:06:55.441 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:55.441 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ==============>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:55.441 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ==============> Parameters: 87(Integer)
+2020-06-02 15:06:55.442 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ================>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:55.442 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ================> Parameters: 89(Integer)
+2020-06-02 15:06:55.443 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : <================      Total: 0
+2020-06-02 15:06:55.443 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : <==============      Total: 1
+2020-06-02 15:06:55.444 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : <============      Total: 1
+2020-06-02 15:06:55.444 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 3
+2020-06-02 15:06:55.444 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:55.444 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 91(Integer)
+2020-06-02 15:06:55.445 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 0
+2020-06-02 15:06:55.446 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.JobLevelMapper.getAllJobLevels   : ==>  Preparing: select * from joblevel 
+2020-06-02 15:06:55.446 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ==========>  Preparing: select * from department where parentId = ?; 
+2020-06-02 15:06:55.446 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : ==========> Parameters: 92(Integer)
+2020-06-02 15:06:55.447 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : <==========      Total: 0
+2020-06-02 15:06:55.448 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : <========      Total: 4
+2020-06-02 15:06:55.448 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : <======      Total: 1
+2020-06-02 15:06:55.448 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : <====      Total: 1
+2020-06-02 15:06:55.448 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.JobLevelMapper.getAllJobLevels   : ==> Parameters: 
+2020-06-02 15:06:55.448 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.D.getAllDepartmentsByParentId    : <==      Total: 1
+2020-06-02 15:06:55.452 DEBUG 9184 --- [nio-8081-exec-4] t.c.v.m.JobLevelMapper.getAllJobLevels   : <==      Total: 8
+2020-06-02 15:06:55.455 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:55.456 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:55.459 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:55.460 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.PositionMapper.getAllPositions   : ==>  Preparing: select * from position 
+2020-06-02 15:06:55.460 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.PositionMapper.getAllPositions   : ==> Parameters: 
+2020-06-02 15:06:55.461 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.PositionMapper.getAllPositions   : <==      Total: 6
+2020-06-02 15:06:55.542 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.E.getEmployeeByPage              : ==>  Preparing: select e.*, p.`id` as pid, p.`name` as pname,n.`id` as nid, n.`name` as nname, d.`id` as did, d.`name` as dname, j.`id` as jid, j.`name` as jname, pos.`id` as posid, pos.`name` as posname from employee e , nation n, politicsstatus p, department d, joblevel j, position pos where e.`nationId`=n.`id` and e.`politicId`=p.`id` and e.`departmentId`=d.`id` and e.`jobLevelId`=j.`id` and e.`posId`=pos.`id` limit ?, ? 
+2020-06-02 15:06:55.543 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.E.getEmployeeByPage              : ==> Parameters: 0(Integer), 10(Integer)
+2020-06-02 15:06:55.569 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.E.getEmployeeByPage              : <==      Total: 10
+2020-06-02 15:06:55.573 DEBUG 9184 --- [nio-8081-exec-2] t.c.vhr.mapper.EmployeeMapper.getTotal   : ==>  Preparing: select count(*) from employee e 
+2020-06-02 15:06:55.574 DEBUG 9184 --- [nio-8081-exec-2] t.c.vhr.mapper.EmployeeMapper.getTotal   : ==> Parameters: 
+2020-06-02 15:06:55.576 DEBUG 9184 --- [nio-8081-exec-2] t.c.vhr.mapper.EmployeeMapper.getTotal   : <==      Total: 1
+2020-06-02 15:06:58.054 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:06:58.054 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:06:58.058 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:06:58.059 DEBUG 9184 --- [nio-8081-exec-9] t.c.vhr.mapper.EmployeeMapper.maxWorkID  : ==>  Preparing: select max(workID) from employee ; 
+2020-06-02 15:06:58.060 DEBUG 9184 --- [nio-8081-exec-9] t.c.vhr.mapper.EmployeeMapper.maxWorkID  : ==> Parameters: 
+2020-06-02 15:06:58.061 DEBUG 9184 --- [nio-8081-exec-9] t.c.vhr.mapper.EmployeeMapper.maxWorkID  : <==      Total: 1
+2020-06-02 15:07:02.503 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:07:02.503 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:07:02.505 DEBUG 9184 --- [nio-8081-exec-8] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:07:04.623 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:07:04.624 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:07:04.640 DEBUG 9184 --- [nio-8081-exec-3] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:07:11.952  INFO 9184 --- [MessageBroker-2] o.s.w.s.c.WebSocketMessageBrokerStats    : WebSocketSession[7 current WS(0)-HttpStream(5)-HttpPoll(2), 8 total, 0 closed abnormally (0 connect failure, 0 send limit, 1 transport error)], stompSubProtocol[processed CONNECT(2)-CONNECTED(2)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 8, active threads = 0, queued tasks = 0, completed tasks = 15], outboundChannel[pool size = 3, active threads = 0, queued tasks = 0, completed tasks = 3], sockJsScheduler[pool size = 4, active threads = 1, queued tasks = 8, completed tasks = 15]
+2020-06-02 15:07:25.585  WARN 9184 --- [nio-8081-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'application/javascript;charset=UTF-8']
+2020-06-02 15:07:25.611  WARN 9184 --- [nio-8081-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'application/javascript;charset=UTF-8']
+2020-06-02 15:07:25.958  WARN 9184 --- [nio-8081-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'text/event-stream;charset=UTF-8']
+2020-06-02 15:07:26.684 ERROR 9184 --- [nio-8081-exec-4] s.e.ErrorMvcAutoConfiguration$StaticView : Cannot render error page for request [/ws/ep/514/c5ljqjwn/htmlfile] and exception [你的主机中的软件中止了一个已建立的连接。] as the response has already been committed. As a result, the response may have the wrong status code.
+2020-06-02 15:07:27.536 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:07:27.536 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:07:27.545 DEBUG 9184 --- [nio-8081-exec-9] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:07:28.096 ERROR 9184 --- [io-8081-exec-10] s.e.ErrorMvcAutoConfiguration$StaticView : Cannot render error page for request [/ws/ep/134/rr5ep4wg/htmlfile] and exception [你的主机中的软件中止了一个已建立的连接。] as the response has already been committed. As a result, the response may have the wrong status code.
+2020-06-02 15:07:29.666 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:07:29.667 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:07:29.676 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:07:52.564 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:07:52.564 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:07:52.567 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:07:54.704 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:07:54.704 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:07:54.709 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:08:17.594 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:08:17.595 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:08:17.603 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:08:19.726 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:08:19.727 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:08:19.732 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:08:42.621 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:08:42.621 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:08:42.624 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:08:44.756 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:08:44.757 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:08:44.764 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:08:52.625 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:08:52.627 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:08:52.637 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:08:52.715 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.EmployeeMapper.insertSelective   : ==>  Preparing: insert into employee ( name, gender, birthday, idCard, wedlock, nationId, nativePlace, politicId, email, phone, address, departmentId, jobLevelId, posId, engageForm, tiptopDegree, specialty, school, beginDate, workID, contractTerm, conversionTime, beginContract, endContract ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-06-02 15:08:52.720 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.EmployeeMapper.insertSelective   : ==> Parameters: sdfsdf(String), 男(String), 2016-06-01(Date), 330120201606012316(String), 未婚(String), 1(Integer), 湖南长沙(String), 6(Integer), 165156680@qq.com(String), 15203168497(String), 上海静安(String), 82(Integer), 13(Integer), 31(Integer), 劳动合同(String), 本科(String), 市场营销(String), 长沙理工大学(String), 2018-06-03(Date), 00000064(String), 3.0(Double), 2018-07-02(Date), 2018-06-03(Date), 2021-06-02(Date)
+2020-06-02 15:08:52.727 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.EmployeeMapper.insertSelective   : <==    Updates: 1
+2020-06-02 15:08:52.730 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.EmployeeMapper.getEmployeeById   : ==>  Preparing: select e.*, p.`id` as pid, p.`name` as pname,n.`id` as nid, n.`name` as nname, d.`id` as did, d.`name` as dname, j.`id` as jid, j.`name` as jname, pos.`id` as posid, pos.`name` as posname from employee e , nation n, politicsstatus p, department d, joblevel j, position pos where e.`nationId`=n.`id` and e.`politicId`=p.`id` and e.`departmentId`=d.`id` and e.`jobLevelId`=j.`id` and e.`posId`=pos.`id` and e.`id`=? 
+2020-06-02 15:08:52.730 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.EmployeeMapper.getEmployeeById   : ==> Parameters: 1532(Integer)
+2020-06-02 15:08:52.732 DEBUG 9184 --- [nio-8081-exec-7] t.c.v.m.EmployeeMapper.getEmployeeById   : <==      Total: 1
+2020-06-02 15:08:52.733  INFO 9184 --- [nio-8081-exec-7] top.codeboy.vhr.service.EmployeeService  : Employee{id=1532, name='sdfsdf', gender='男', birthday=Wed Jun 01 00:00:00 CST 2016, idCard='330120201606012316', wedlock='未婚', nationId=1, nativePlace='湖南长沙', politicId=6, email='165156680@qq.com', phone='15203168497', address='上海静安', departmentId=82, jobLevelId=13, posId=31, engageForm='劳动合同', tiptopDegree='本科', specialty='市场营销', school='长沙理工大学', beginDate=Sun Jun 03 00:00:00 CST 2018, workState='在职', workID='00000064', contractTerm=3.0, conversionTime=Mon Jul 02 00:00:00 CST 2018, notWorkDate=null, beginContract=Sun Jun 03 00:00:00 CST 2018, endContract=Wed Jun 02 00:00:00 CST 2021, workAge=null, nation=top.codeboy.vhr.model.Nation@d82c5, politicsstatus=top.codeboy.vhr.model.Politicsstatus@328e3f66, department=top.codeboy.vhr.model.Department@bd385c26, jobLevel=top.codeboy.vhr.model.JobLevel@1148b5, position=top.codeboy.vhr.model.Position@2c0f598d}
+2020-06-02 15:08:52.777 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:08:52.777 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:08:52.780 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:08:52.786 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.E.getEmployeeByPage              : ==>  Preparing: select e.*, p.`id` as pid, p.`name` as pname,n.`id` as nid, n.`name` as nname, d.`id` as did, d.`name` as dname, j.`id` as jid, j.`name` as jname, pos.`id` as posid, pos.`name` as posname from employee e , nation n, politicsstatus p, department d, joblevel j, position pos where e.`nationId`=n.`id` and e.`politicId`=p.`id` and e.`departmentId`=d.`id` and e.`jobLevelId`=j.`id` and e.`posId`=pos.`id` limit ?, ? 
+2020-06-02 15:08:52.786 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.E.getEmployeeByPage              : ==> Parameters: 0(Integer), 10(Integer)
+2020-06-02 15:08:52.798 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.E.getEmployeeByPage              : <==      Total: 10
+2020-06-02 15:08:52.798 DEBUG 9184 --- [nio-8081-exec-5] t.c.vhr.mapper.EmployeeMapper.getTotal   : ==>  Preparing: select count(*) from employee e 
+2020-06-02 15:08:52.798 DEBUG 9184 --- [nio-8081-exec-5] t.c.vhr.mapper.EmployeeMapper.getTotal   : ==> Parameters: 
+2020-06-02 15:08:52.799 DEBUG 9184 --- [nio-8081-exec-5] t.c.vhr.mapper.EmployeeMapper.getTotal   : <==      Total: 1
+2020-06-02 15:09:07.640 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:09:07.641 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:09:07.643 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:09:09.779 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:09:09.779 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:09:09.782 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:09:32.653 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:09:32.653 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:09:32.657 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:09:34.795 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:09:34.795 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:09:34.797 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:09:57.921 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:09:57.922 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:09:57.924 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:09:59.921 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:09:59.921 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:09:59.923 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:10:23.921 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:10:23.921 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:10:23.923 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:10:25.927 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:10:25.927 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:10:25.935 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:10:49.929 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:10:49.930 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:10:49.940 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:10:51.928 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:10:51.928 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:10:51.934 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:11:15.921 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:11:15.921 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:11:15.924 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:11:17.924 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:11:17.925 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:11:17.930 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:11:41.935 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:11:41.936 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:11:41.940 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:11:43.925 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:11:43.927 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:11:43.933 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:12:07.922 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:12:07.922 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:12:07.924 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:12:09.921 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:12:09.921 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:12:09.925 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:12:33.921 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:12:33.921 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:12:33.924 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:12:35.922 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:12:35.923 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:12:35.924 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:12:59.923 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:12:59.924 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:12:59.929 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:13:01.920 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:13:01.921 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:13:01.923 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:13:25.923 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:13:25.924 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:13:25.927 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:13:27.942 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:13:27.943 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:13:27.952 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:13:51.920 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:13:51.920 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:13:51.922 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:13:53.921 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:13:53.921 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:13:53.923 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:14:17.921 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:14:17.921 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:14:17.923 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:14:19.931 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:14:19.932 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:14:19.934 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:14:43.933 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:14:43.939 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:14:43.948 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:14:45.926 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:14:45.927 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:14:45.931 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:15:09.923 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:15:09.923 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:15:09.925 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:15:11.928 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:15:11.928 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:15:11.939 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:15:35.922 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:15:35.922 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:15:35.924 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:15:37.921 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:15:37.921 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:15:37.923 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:16:01.925 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:16:01.925 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:16:01.930 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:16:03.924 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:16:03.924 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:16:03.927 DEBUG 9184 --- [nio-8081-exec-6] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:16:27.929 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:16:27.930 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:16:27.943 DEBUG 9184 --- [nio-8081-exec-5] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:16:29.922 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:16:29.922 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:16:29.925 DEBUG 9184 --- [nio-8081-exec-2] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:16:53.921 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:16:53.921 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:16:53.923 DEBUG 9184 --- [io-8081-exec-10] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53
+2020-06-02 15:16:55.920 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==>  Preparing: select m.*, r.`id` as rid, r.`name` as rname, r.`nameZh` as rnameZh from menu m , menu_role mr, role r where m.`id`=mr.`mid` and r.`id`=mr.`rid` order by m.`id` 
+2020-06-02 15:16:55.920 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : ==> Parameters: 
+2020-06-02 15:16:55.922 DEBUG 9184 --- [nio-8081-exec-1] t.c.v.m.MenuMapper.getAllMenusWithRole   : <==      Total: 53

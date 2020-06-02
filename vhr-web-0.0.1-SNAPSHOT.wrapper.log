@@ -1,0 +1,18 @@
+2020-06-02 15:05:42,727 INFO  - Stopping vhr-web-0.0.1-SNAPSHOT
+2020-06-02 15:05:42,731 DEBUG - ProcessKill 8276
+2020-06-02 15:05:42,838 INFO  - Found child process: 8300 Name: conhost.exe
+2020-06-02 15:05:42,913 INFO  - Stopping process 8300
+2020-06-02 15:05:42,922 INFO  - Send SIGINT 8300
+2020-06-02 15:05:42,927 WARN  - SIGINT to 8300 failed - Killing as fallback
+2020-06-02 15:05:42,933 INFO  - Stopping process 8276
+2020-06-02 15:05:42,938 INFO  - Send SIGINT 8276
+2020-06-02 15:05:42,986 WARN  - SIGINT to 8276 failed - Killing as fallback
+2020-06-02 15:05:42,989 INFO  - Finished vhr-web-0.0.1-SNAPSHOT
+2020-06-02 15:05:42,995 DEBUG - Completed. Exit code is 0
+2020-06-02 15:06:02,663 DEBUG - Starting WinSW in the CLI mode
+2020-06-02 15:06:03,002 INFO  - Installing the service with id 'vhr-web-0.0.1-SNAPSHOT'
+2020-06-02 15:06:03,028 DEBUG - Completed. Exit code is 0
+2020-06-02 15:06:03,165 DEBUG - Starting WinSW in the service mode
+2020-06-02 15:06:03,185 INFO  - Starting java -jar  vhr-web-0.0.1-SNAPSHOT.jar
+2020-06-02 15:06:03,202 INFO  - Started process 9184
+2020-06-02 15:06:03,226 DEBUG - Forwarding logs of the process System.Diagnostics.Process (java) to winsw.DefaultLogAppender
